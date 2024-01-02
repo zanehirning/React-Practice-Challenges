@@ -24,9 +24,9 @@ export default function ColorBox() {
     setColor(actualColor)
   }
 
-  useEffect(() => {
-    generateColor();
-  }, [])
+  if (color === "") {
+    generateColor()
+  }
 
   function handleAnswerClicked(e: BaseSyntheticEvent, answer: string) {
     if (answer === color) {
